@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\zad1\\zadanie1\\zadanie1\\zadanie1.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\zad1\\zadanie1\\zadanie1\\zadanie1.csproj",
       "projectName": "zadanie1",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\zad1\\zadanie1\\zadanie1\\zadanie1.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\zad1\\zadanie1\\zadanie1\\zadanie1.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\zad1\\zadanie1\\zadanie1\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\zad1\\zadanie1\\zadanie1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

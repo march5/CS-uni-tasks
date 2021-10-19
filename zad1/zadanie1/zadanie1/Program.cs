@@ -13,7 +13,6 @@ namespace zadanie1
             public EHeroClass heroClass;
         }
 
-
         static bool CheckName(ref string name)
         {
             int i = 0;
@@ -29,7 +28,6 @@ namespace zadanie1
                     name = name.Remove(i + 1, 2);
                     Console.WriteLine("OK");
                 }
-
                 i++;
             }
 
@@ -97,21 +95,21 @@ namespace zadanie1
             public static void StartTalking() { }
         }
 
-        public class NpcDialogPart {
-            public List<string> dialogi = new List<string> { "Witaj, czy możesz mi pomóc dostać się do innego miasta? ", 
+        public static class NpcDialogPart {
+            public static List<string> dialogi = new List<string> { "Witaj, czy możesz mi pomóc dostać się do innego miasta? ", 
                                                              "Dziękuję! W nagrodę otrzymasz ode mnie 100 sztuk złota",
                                                             "Niestety nie mam więcej.Jestem bardzo biedny." +
                                                             "Dziękuję."};
-            public List<int> przejscia = new List<int> { };
+            public static List<int> przejscia = new List<int> { 0, 5, 1, 2, 3, 4, -1 , -1};
 
         }
 
-        public class HeroDialogPart
+        public static class HeroDialogPart
         {
-            public List<string> dialogi = new List<string> {" Tak, chętnie pomogę." + " Dam znać jak będę gotowy" + "100 sztuk złota to za mało!"
-            + "OK, może być 100 sztuk złota." + "W takim razie radź sobie sam." + "Nie, nie pomogę, żegnaj."};
+            public static List<string> dialogi = new List<string> {" Tak, chętnie pomogę." , " Dam znać jak będę gotowy" , "100 sztuk złota to za mało!"
+            , "OK, może być 100 sztuk złota." , "W takim razie radź sobie sam." , "Nie, nie pomogę, żegnaj."};
 
-            public List<int> przejscia = new List<int> { };
+            public static List<int> przejscia = new List<int> { 1, -1, 2, 3, -1, -1 };
         }
                     
         public class Location {
@@ -126,8 +124,6 @@ namespace zadanie1
                 npcs[0] = new NonPlayerCharacter("Adolin");
                 npcs[1] = new NonPlayerCharacter("Kal");
             }
-
-            
         }
 
         public static void ShowLocation(Location lokacja)
@@ -142,7 +138,48 @@ namespace zadanie1
 
         public static void TalkTo(NonPlayerCharacter npc)
         {
+            bool properChoice = false;
+            int next, next2;
+            Console.WriteLine(NpcDialogPart.dialogi[0]);
+            next = NpcDialogPart.przejscia[0];
+            next2 = NpcDialogPart.przejscia[1];
 
+            while(next != -1)
+            {
+                //Console.WriteLine(HeroDialogPart.dialogi[next]);
+
+                Console.WriteLine("1 - " + HeroDialogPart.dialogi[next]);
+                Console.WriteLine("2 - " + HeroDialogPart.dialogi[next2]);
+
+                var key = Console.ReadKey();
+                
+
+                while(properChoice == false)
+                {
+                    if(key.Key == ConsoleKey.D1)
+                    {
+                        next = HeroDialogPart.przejscia[next];
+                            properChoice = true;
+                        break;
+                    }
+                    else if(key.Key == ConsoleKey.D2)
+                    {
+                            properChoice = true;
+                        next = HeroDialogPart.przejscia[next2];
+                        break;
+                    }
+                    key = Console.ReadKey();
+                }
+                
+                if(next >= 0)
+                {
+                Console.WriteLine(NpcDialogPart.dialogi[next]);
+                next2 = NpcDialogPart.przejscia[next*2 + 1];
+                next = NpcDialogPart.przejscia[next*2];
+                }
+                
+                properChoice = false;
+            }
         }
 
         static void Main(string[] args)
@@ -154,21 +191,22 @@ namespace zadanie1
             Console.WriteLine("[1] Zacznij nową grę");
             Console.WriteLine("[2] Zamknij program");
 
-            var key = Console.ReadKey();
+            ConsoleKeyInfo key;
             int properChoice = 0;
 
             while(properChoice == 0)
-            if (key.Key == ConsoleKey.D1)
-            {
+            { 
+            key = Console.ReadKey();
+                if (key.Key == ConsoleKey.D1)
+                {
                     HeroCreation();
                     lokacja = new Location("Kholinar");
 
-                    ShowLocation(lokacja);
-
-                    key = Console.ReadKey();
                     bool exit = false;
-                    while(exit == false)
-                    {
+                    while (exit == false)
+                    {   
+                        ShowLocation(lokacja);
+                        key = Console.ReadKey();
                         switch (key.Key)
                         {
                             case ConsoleKey.D1:
@@ -179,21 +217,21 @@ namespace zadanie1
                                 break;
                             case ConsoleKey.X:
                                 exit = true;
+                                properChoice = 1;
                                 break;
                             default:
                                 Console.WriteLine("Niepoprawny wybór!");
                                 break;
                         }
                     }
-
-                
+                }
+                else
+                if (key.Key != ConsoleKey.D2)
+                {
+                    Console.WriteLine("Niepoprawny wybór!");
+                }
+                else properChoice = 1;
             }
-            else
-            if(key.Key != ConsoleKey.D2)
-            {
-                Console.WriteLine("Niepoprawny wybór!");
-            }
-                
         }
     }
 }
