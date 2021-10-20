@@ -85,6 +85,8 @@ namespace zadanie1
         public class NonPlayerCharacter
         {
             public string name;
+            public NpcDialogPart npcDialog;
+            public HeroDialogPart heroDialog;
 
 
             public NonPlayerCharacter(string a)
@@ -92,24 +94,60 @@ namespace zadanie1
                 name = a;
             }
 
-            public static void StartTalking() { }
+            public void addNpcDial(List<string> dial, List<int> p)
+            {
+                npcDialog = new NpcDialogPart(dial, p);
+            }
+
+            public void addHeroDial(List<string> dial, List<int> p)
+            {
+                heroDialog = new HeroDialogPart(dial, p);
+            }
+
         }
 
-        public static class NpcDialogPart {
-            public static List<string> dialogi = new List<string> { "Witaj, czy możesz mi pomóc dostać się do innego miasta? ", 
+        public interface IDialogPart {
+
+            public static List<string> dialogi;
+            public static List<int> przejscia;
+        
+        }
+
+
+        public class NpcDialogPart : IDialogPart {
+
+            public List<string> dialogi;
+            /*= new List<string> { "Witaj, czy możesz mi pomóc dostać się do innego miasta? ", 
                                                              "Dziękuję! W nagrodę otrzymasz ode mnie 100 sztuk złota",
                                                             "Niestety nie mam więcej.Jestem bardzo biedny." +
-                                                            "Dziękuję."};
-            public static List<int> przejscia = new List<int> { 0, 5, 1, 2, 3, 4, -1 , -1};
+                                                            "Dziękuję."};*/
+
+            public List<int> przejscia;
+            //= new List<int> { 0, 5, 1, 2, 3, 4, -1 , -1};
+
+            public NpcDialogPart(List<string> d, List<int> p)
+            {
+                dialogi = d;
+                przejscia = p;
+            }
 
         }
 
-        public static class HeroDialogPart
+        public class HeroDialogPart : IDialogPart
         {
-            public static List<string> dialogi = new List<string> {" Tak, chętnie pomogę." , " Dam znać jak będę gotowy" , "100 sztuk złota to za mało!"
-            , "OK, może być 100 sztuk złota." , "W takim razie radź sobie sam." , "Nie, nie pomogę, żegnaj."};
+            public List<string> dialogi;
+            //= new List<string> {" Tak, chętnie pomogę." , " Dam znać jak będę gotowy" , "100 sztuk złota to za mało!"
+            //, "OK, może być 100 sztuk złota." , "W takim razie radź sobie sam." , "Nie, nie pomogę, żegnaj."};
 
-            public static List<int> przejscia = new List<int> { 1, -1, 2, 3, -1, -1 };
+            public List<int> przejscia;
+            //= new List<int> { 1, -1, 2, 3, -1, -1 };
+
+            public HeroDialogPart(List<string> d, List<int> p)
+            {
+                dialogi = d;
+                przejscia = p;
+            }
+
         }
                     
         public class Location {
@@ -123,6 +161,17 @@ namespace zadanie1
                 npcs = new NonPlayerCharacter[2];
                 npcs[0] = new NonPlayerCharacter("Adolin");
                 npcs[1] = new NonPlayerCharacter("Kal");
+
+                npcs[0].addNpcDial(new List<string> { "Witaj, czy możesz mi pomóc dostać się do innego miasta? ",
+                                                             "Dziękuję! W nagrodę otrzymasz ode mnie 100 sztuk złota",
+                                                            "Niestety nie mam więcej.Jestem bardzo biedny.", 
+                                                            "Dziękuję."}, new List<int> { 0, 5, 1, 2, 3, 4, -1, -1 });
+                npcs[0].addHeroDial(new List<string> {" Tak, chętnie pomogę." , " Dam znać jak będę gotowy" , "100 sztuk złota to za mało!"
+            ,                                           "OK, może być 100 sztuk złota." , "W takim razie radź sobie sam." ,
+                                                        "Nie, nie pomogę, żegnaj."}, new List<int> { 1, -1, 2, 3, -1, -1 });
+
+                //npcs[1].addNpcDial();
+                //npcs[1].addHeroDial();
             }
         }
 
@@ -140,16 +189,14 @@ namespace zadanie1
         {
             bool properChoice = false;
             int next, next2;
-            Console.WriteLine(NpcDialogPart.dialogi[0]);
-            next = NpcDialogPart.przejscia[0];
-            next2 = NpcDialogPart.przejscia[1];
+            Console.WriteLine(npc.npcDialog.dialogi[0]);
+            next = npc.npcDialog.przejscia[0];
+            next2 = npc.npcDialog.przejscia[1];
 
             while(next != -1)
             {
-                //Console.WriteLine(HeroDialogPart.dialogi[next]);
-
-                Console.WriteLine("1 - " + HeroDialogPart.dialogi[next]);
-                Console.WriteLine("2 - " + HeroDialogPart.dialogi[next2]);
+                Console.WriteLine("1 - " + npc.heroDialog.dialogi[next]);
+                Console.WriteLine("2 - " + npc.heroDialog.dialogi[next2]);
 
                 var key = Console.ReadKey();
                 
@@ -158,14 +205,14 @@ namespace zadanie1
                 {
                     if(key.Key == ConsoleKey.D1)
                     {
-                        next = HeroDialogPart.przejscia[next];
+                        next = npc.heroDialog.przejscia[next];
                             properChoice = true;
                         break;
                     }
                     else if(key.Key == ConsoleKey.D2)
                     {
                             properChoice = true;
-                        next = HeroDialogPart.przejscia[next2];
+                        next = npc.heroDialog.przejscia[next2];
                         break;
                     }
                     key = Console.ReadKey();
@@ -173,12 +220,27 @@ namespace zadanie1
                 
                 if(next >= 0)
                 {
-                Console.WriteLine(NpcDialogPart.dialogi[next]);
-                next2 = NpcDialogPart.przejscia[next*2 + 1];
-                next = NpcDialogPart.przejscia[next*2];
+                Console.WriteLine(npc.npcDialog.dialogi[next]);
+                next2 = npc.npcDialog.przejscia[next*2 + 1];
+                next = npc.npcDialog.przejscia[next*2];
                 }
                 
                 properChoice = false;
+            }
+        }
+
+        public class DialogParser
+        {
+            Hero hero;
+
+            public DialogParser(Hero x)
+            {
+                hero = x;
+            }
+
+            public string ParseDialog(IDialogPart part)
+            {
+                return null;
             }
         }
 
