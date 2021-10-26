@@ -5,10 +5,8 @@ namespace zad02
     class Program
     {
 
-        public delegate bool VoteStart();
+        public delegate void VoteStart();
         public delegate void VoteEnd();
-
-        public delegate bool GiveVote();
 
         public class Parliament
         {
@@ -16,6 +14,8 @@ namespace zad02
             public event VoteEnd VotingEnded;
 
             public string topic;
+            public int votesYes = 0;
+            public int votesNo = 0;
 
             public void StartVote(string t)
             {
@@ -30,10 +30,11 @@ namespace zad02
                 VotingStarted?.Invoke();
             }
 
-            public void EndVote()
-            {
+            public void EndVote(object sender, bool vote)
+            {   
                 Console.WriteLine("END");
-
+                Console.WriteLine("Voting on " + this.topic + " ended with " + this.votesYes + " votes on yes and " + this.votesNo + " votes on NO ");
+                
                 OnVoteEnd();
             }
 
@@ -41,35 +42,51 @@ namespace zad02
             {
                 VotingEnded?.Invoke();
             }
+
+            public void TakeVote(object sender, bool vote)
+            {
+                if (vote == true) votesYes++;
+                else votesNo++;
+            }
         }
 
         public class Parlamentarian
         {
-            public event GiveVote PVote;
+            public event EventHandler<bool> PVote;
 
-            public static bool Vote()
+            public void Vote()
             {
-                bool res;
                 Random rnd = new Random();
-                if (rnd.Next(2) == 1) res = true;
-                else res = false;
-                Console.WriteLine("Voted " + res);
-                return res;
-            }            
+                if (rnd.Next(2) == 1) OnGiveVote(true);
+                else OnGiveVote(false);
+                //Console.WriteLine("Voted " + res);
+            }
+
+            protected virtual void OnGiveVote(bool vote)
+            {
+                  PVote?.Invoke(this, vote);
+            }
         }
 
         static void Main(string[] args)
         {
+            int i;
             int pAmount = Convert.ToInt32(Console.ReadLine());
+            string topic = Console.ReadLine();
 
             Parliament parliament = new Parliament();
             Parlamentarian[] parlamentarians = new Parlamentarian[pAmount];
 
-            for(int i = 0; i < pAmount; i++)
-            parliament.VotingStarted += Parlamentarian.Vote;
+            for(i = 0; i < pAmount ; i++)
+            {
+                parlamentarians[i] = new Parlamentarian();
+                parliament.VotingStarted += parlamentarians[i].Vote;
+                parlamentarians[i].PVote += parliament.TakeVote;
+            }
 
-            parliament.StartVote("temat");
+            parlamentarians[i - 1].PVote += parliament.EndVote;
 
+            parliament.StartVote(topic);
         }
     }
 }
