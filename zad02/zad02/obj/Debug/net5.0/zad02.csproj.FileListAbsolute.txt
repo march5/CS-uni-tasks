@@ -1,0 +1,16 @@
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\bin\Debug\net5.0\zad02.exe
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\bin\Debug\net5.0\zad02.deps.json
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\bin\Debug\net5.0\zad02.runtimeconfig.json
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\bin\Debug\net5.0\zad02.runtimeconfig.dev.json
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\bin\Debug\net5.0\zad02.dll
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\bin\Debug\net5.0\ref\zad02.dll
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\bin\Debug\net5.0\zad02.pdb
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\zad02.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\zad02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\zad02.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\zad02.AssemblyInfo.cs
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\zad02.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\zad02.dll
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\ref\zad02.dll
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\zad02.pdb
+C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\zad02\zad02\obj\Debug\net5.0\zad02.genruntimeconfig.cache
