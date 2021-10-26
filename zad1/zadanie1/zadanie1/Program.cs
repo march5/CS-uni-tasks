@@ -34,7 +34,7 @@ namespace zadanie1
             return true;
         }
 
-        public static void HeroCreation()
+        public static Hero HeroCreation()
         {
             Console.Clear();
             Hero hero = new Hero();
@@ -80,6 +80,8 @@ namespace zadanie1
             Console.WriteLine(hero.heroClass.ToString() + " " + hero.name + " wyrusza do dungeonu.");
 
             Console.ReadKey();
+
+            return hero;
         }
 
         public class NonPlayerCharacter
@@ -108,21 +110,21 @@ namespace zadanie1
 
         public interface IDialogPart {
 
-            public static List<string> dialogi;
-            public static List<int> przejscia;
+            public List<string> dialogi { get; set; }
+            public List<int> przejscia { get; set; }
         
         }
 
 
         public class NpcDialogPart : IDialogPart {
 
-            public List<string> dialogi;
+            public List<string> dialogi { get; set; }
             /*= new List<string> { "Witaj, czy możesz mi pomóc dostać się do innego miasta? ", 
                                                              "Dziękuję! W nagrodę otrzymasz ode mnie 100 sztuk złota",
                                                             "Niestety nie mam więcej.Jestem bardzo biedny." +
                                                             "Dziękuję."};*/
 
-            public List<int> przejscia;
+            public List<int> przejscia { get; set; }
             //= new List<int> { 0, 5, 1, 2, 3, 4, -1 , -1};
 
             public NpcDialogPart(List<string> d, List<int> p)
@@ -135,11 +137,11 @@ namespace zadanie1
 
         public class HeroDialogPart : IDialogPart
         {
-            public List<string> dialogi;
+            public List<string> dialogi { get; set; }
             //= new List<string> {" Tak, chętnie pomogę." , " Dam znać jak będę gotowy" , "100 sztuk złota to za mało!"
             //, "OK, może być 100 sztuk złota." , "W takim razie radź sobie sam." , "Nie, nie pomogę, żegnaj."};
 
-            public List<int> przejscia;
+            public List<int> przejscia { get; set; }
             //= new List<int> { 1, -1, 2, 3, -1, -1 };
 
             public HeroDialogPart(List<string> d, List<int> p)
@@ -170,8 +172,9 @@ namespace zadanie1
             ,                                           "OK, może być 100 sztuk złota." , "W takim razie radź sobie sam." ,
                                                         "Nie, nie pomogę, żegnaj."}, new List<int> { 1, -1, 2, 3, -1, -1 });
 
-                //npcs[1].addNpcDial();
-                //npcs[1].addHeroDial();
+                npcs[1].addNpcDial(new List<string> { "Hej, czy to ty jesteś tym słynnym #HERONAME# - pogromcą smoków?" , "WOW! Miło poznać!" }, 
+                                                        new List<int> { 0, 1, -1, -1 });
+                npcs[1].addHeroDial(new List<string> { "Tak, jestem #HERONAME# " , "Nie." } , new List<int> { 1, -1 });
             }
         }
 
@@ -185,18 +188,24 @@ namespace zadanie1
             Console.WriteLine("[X] Zakmnij program");
         }
 
-        public static void TalkTo(NonPlayerCharacter npc)
+        public static void TalkTo(NonPlayerCharacter npc, Hero hero)
         {
+            DialogParser parser = new DialogParser(hero);
             bool properChoice = false;
             int next, next2;
-            Console.WriteLine(npc.npcDialog.dialogi[0]);
+            //Console.WriteLine(npc.npcDialog.dialogi[0]);
+            Console.WriteLine(parser.ParseDialog(npc.npcDialog, 0));
             next = npc.npcDialog.przejscia[0];
             next2 = npc.npcDialog.przejscia[1];
 
             while(next != -1)
             {
-                Console.WriteLine("1 - " + npc.heroDialog.dialogi[next]);
-                Console.WriteLine("2 - " + npc.heroDialog.dialogi[next2]);
+                //Console.WriteLine("1 - " + npc.heroDialog.dialogi[next]);
+                //Console.WriteLine("2 - " + npc.heroDialog.dialogi[next2]);
+
+                Console.WriteLine("1 - " + parser.ParseDialog(npc.heroDialog, next));
+                Console.WriteLine("2 - " + parser.ParseDialog(npc.heroDialog, next2));
+
 
                 var key = Console.ReadKey();
                 
@@ -220,7 +229,8 @@ namespace zadanie1
                 
                 if(next >= 0)
                 {
-                Console.WriteLine(npc.npcDialog.dialogi[next]);
+                    //Console.WriteLine(npc.npcDialog.dialogi[next]);
+                    Console.WriteLine(parser.ParseDialog(npc.npcDialog, next));
                 next2 = npc.npcDialog.przejscia[next*2 + 1];
                 next = npc.npcDialog.przejscia[next*2];
                 }
@@ -238,15 +248,35 @@ namespace zadanie1
                 hero = x;
             }
 
-            public string ParseDialog(IDialogPart part)
+            public string ParseDialog(IDialogPart part, int i)
             {
-                return null;
+                string outPart = "";
+                int j = 0,k = 0;
+                while(j < part.dialogi[i].Length)
+                {
+                    while (j < part.dialogi[i].Length && part.dialogi[i][j] != '#')
+                        j++;
+
+                    outPart += part.dialogi[i].Substring(k, j - k);
+
+                    //Console.WriteLine(part.dialogi[i].Substring(j, 10) + "$");
+
+                    if( j <= part.dialogi[i].Length - 10 && part.dialogi[i].Substring(j, 10) == "#HERONAME#")
+                    {
+                        outPart += hero.name;
+                    }
+
+                    j = j + 10;
+                    k = j;
+                }
+
+                return outPart;
             }
         }
 
         static void Main(string[] args)
         {
-
+            Hero hero;
             Location lokacja;
 
             Console.WriteLine("Witaj w grze Evil Dungeon");
@@ -261,7 +291,7 @@ namespace zadanie1
             key = Console.ReadKey();
                 if (key.Key == ConsoleKey.D1)
                 {
-                    HeroCreation();
+                    hero = HeroCreation();
                     lokacja = new Location("Kholinar");
 
                     bool exit = false;
@@ -272,10 +302,10 @@ namespace zadanie1
                         switch (key.Key)
                         {
                             case ConsoleKey.D1:
-                                TalkTo(lokacja.npcs[0]);
+                                TalkTo(lokacja.npcs[0], hero);
                                 break;
                             case ConsoleKey.D2:
-                                TalkTo(lokacja.npcs[1]);
+                                TalkTo(lokacja.npcs[1], hero);
                                 break;
                             case ConsoleKey.X:
                                 exit = true;
