@@ -1,0 +1,16 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\bin\Debug\net5.0\task3.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\bin\Debug\net5.0\task3.deps.json
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\bin\Debug\net5.0\task3.runtimeconfig.json
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\bin\Debug\net5.0\task3.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\bin\Debug\net5.0\task3.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\bin\Debug\net5.0\ref\task3.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\bin\Debug\net5.0\task3.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\task3.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\task3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\task3.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\task3.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\task3.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\task3.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\ref\task3.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\task3.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\task3\task3\obj\Debug\net5.0\task3.genruntimeconfig.cache
