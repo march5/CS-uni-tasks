@@ -16,7 +16,8 @@ namespace task3
             }
         }
        
-        class Square //3.1 nie dziedziczy się kwadrata po prostokącie
+        class Square //3.1 nie dziedziczy się kwadrata po prostokącie, możemy ew stworzyć nową nadrzędną klasę abstrakcyjną po której będą dziedziczyć
+            //klasy Square i Rectangle
         {
             public int Height
             {
@@ -103,61 +104,128 @@ namespace task3
             {
                 return this.imaginary;
             }
+
         }
 
         //3.5
-        //https://gist.github.com/klmr/314d05b66c72d62bd8a184514568e22f
 
-        public class Matrix<T> where T : List<float>
+        public class Matrix
         {
-            private List<T> list;
-            private readonly int width;
-            private readonly int height;
-            private static ICalculator<T> calculator;
+            public int w;
+            public int h;
+            public int[] values;
 
             public Matrix(int w, int h)
             {
-                this.width = w;
-                this.height = h;
+                this.w = w;
+                this.h = h;
+                values = new int[w * h];
             }
 
-            public virtual T this[int i, int j]
+            public int this[int i, int j]
             {
-                get { return list[i * width + j]; }
-                set { list[i * width + j] = value; }
-            }
-            
-            public virtual T GetAt(int i, int j)
-            {
-                return list[i*width + j];
+                get { return this.values[i * w + j]; }
+                set { this.values[i * w + j] = value;  }
             }
 
-            public static Matrix<T> operator +(Matrix<T> a, Matrix<T> b)
+            public static Matrix operator +(Matrix a, Matrix b)
             {
-                if (a.width != b.width || a.height != b.height) throw new ArgumentException("Matricies must have compatible dimensions");
-
-                Matrix<T> re = new Matrix<T>(a.width, a.height);
-
-                for(int i = 0; i < a.list.Count; i++)
+                if(a.w != b.w || a.h != b.h)
                 {
-                    re.list[i] = calculator.Add(a.list[i], b.list[i]);
+                    Console.WriteLine("Wrong matrices sizes!");
+                    return a;
                 }
 
-                return re;
+                var ret = new Matrix(a.w, a.h);
+
+                for(int i = 0; i < a.values.Length; i++)
+                {
+                    ret.values[i] = a.values[i] + b.values[i];
+                }
+
+                return ret;
             }
 
-            public interface ICalculator<T>
+            public static Matrix operator *(Matrix a, Matrix b)
             {
-                T Add(T a, T b);
-                T Multiply(T a, T b);
-            }
+                if(a.h != b.w)
+                {
+                    Console.WriteLine("Those matrices canot be multipied!");
+                    return a;
+                }
+                var ret = new Matrix(a.w, b.h);
+                int temp = 0;
 
-            class Calculator : ICalculator<float>
-            {
-                public float Add(float a, float b) { return a + b; }
-                public float Multiply(float a, float b) { return a * b; }
+                for(int i =0; i < a.w; i++)
+                {
+                    for(int j = 0; j < b.h; j++)
+                    {
+                        temp = 0;
+                        for(int k = 0; k < a.h; k++)
+                        {
+                            temp += a[i, k] * b[k, j];
+                        }
+                        ret[i, j] = temp;
+                    }
+                }
+
+                return ret;
             }
         }
+
+        public class SquareMatrix : Matrix
+        {
+            public SquareMatrix(int a) : base(a, a)
+            {
+                /*this.w = a;
+                this.h = a;
+                this.values = new int[w * h];*/
+            }
+
+            public static SquareMatrix operator +(SquareMatrix a, SquareMatrix b)
+            {
+                var ret = new SquareMatrix(a.w);
+
+                for (int i = 0; i < a.values.Length; i++)
+                {
+                    ret.values[i] = a.values[i] + b.values[i];
+                }
+
+                return ret;
+            }
+
+            public static SquareMatrix operator *(SquareMatrix a, SquareMatrix b)
+            {
+ 
+                var ret = new SquareMatrix(a.w);
+                int temp = 0;
+
+                for (int i = 0; i < a.w; i++)
+                {
+                    for (int j = 0; j < b.h; j++)
+                    {
+                        temp = 0;
+                        for (int k = 0; k < a.h; k++)
+                        {
+                            temp += a[i, k] * b[k, j];
+                        }
+                        ret[i, j] = temp;
+                    }
+                }
+
+                return ret;
+            }
+
+            public bool isDiagonal()
+            {
+                for (int i = 0; i < this.w; i++)
+                    for (int j = 0; j < this.w; j++)
+                        if ((i != j) && (this.values[i * w + j] != 0))
+                            return false;
+                return true;
+            }
+        }
+
 
 
         static void Main(string[] args)
@@ -173,17 +241,33 @@ namespace task3
 
             Console.WriteLine("Complex<string> " + com2.GetReal() + " " + com2.GetIma());*/
 
-            Matrix<List<float>> matrix = new Matrix<List<float>>(3,3);
-            Matrix<List<float>> matrix2 = new Matrix<List<float>>(3, 3);
+            SquareMatrix matrix = new SquareMatrix(3);
+            SquareMatrix matrix2 = new SquareMatrix(3);
 
             for(int i = 0; i < 3; i++)
             {
-                for(int j = 0; j < 3; j++)
+                for(int j =0; j < 3; j++)
                 {
-                    matrix[i, j] = 1f;
+                    matrix[i, j] = (j + 1) * (i + 1);
+                    if (i == j)
+                        matrix2[i, j] = 2;
+                    else
+                        matrix2[i, j] = 0;
                 }
             }
 
+            //matrix = matrix + matrix2;
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(matrix2[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine(matrix2.isDiagonal());
         }
     }
 }
