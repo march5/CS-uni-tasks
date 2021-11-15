@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\LINQ\LINQ\bin\Debug\LINQ.exe.config
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\LINQ\LINQ\bin\Debug\LINQ.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\LINQ\LINQ\bin\Debug\LINQ.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\LINQ\LINQ\obj\Debug\LINQ.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\LINQ\LINQ\obj\Debug\LINQ.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\LINQ\LINQ\obj\Debug\LINQ.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\LINQ\LINQ\obj\Debug\LINQ.pdb
