@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "3rDPMQEXWKeeIbbLnQXCc7unwv8cVRee+RCsBrrMwLJmtUUUODgCnOE/RDZ4r4HIovVG3zyQLj3BEmBcQgJSkw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512"
+  ],
+  "logs": []
+}

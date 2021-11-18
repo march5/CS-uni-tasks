@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator\bin\Debug\SimpleCalculator.exe.config
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator\bin\Debug\SimpleCalculator.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator\bin\Debug\SimpleCalculator.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator\obj\Debug\SimpleCalculator.pdb
