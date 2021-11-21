@@ -14,6 +14,6 @@ C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator.
 C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator.Test\obj\Debug\net472\SimpleCalculator.Test.AssemblyInfoInputs.cache
 C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator.Test\obj\Debug\net472\SimpleCalculator.Test.AssemblyInfo.cs
 C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator.Test\obj\Debug\net472\SimpleCalculator.Test.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator.Test\obj\Debug\net472\SimpleCalculator.Test.csproj.CopyComplete
 C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator.Test\obj\Debug\net472\SimpleCalculator.Test.dll
 C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator.Test\obj\Debug\net472\SimpleCalculator.Test.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\SimpleCalculator\SimpleCalculator.Test\obj\Debug\net472\SimpleCalculator.Test.csproj.CopyComplete
