@@ -2,6 +2,18 @@
 
 namespace SimpleCalculator
 {
+
+    public interface IDiscountFromPeselComputer
+    {
+        bool HasDiscount(String pesel);
+    }
+
+    public class InvalidPeselException : Exception
+    {
+    }
+
+
+
     public interface IAnagramChecker
     {
         bool isAnagram(string word1, string word2);

@@ -138,5 +138,52 @@ namespace SimpleCalculator.Test
                 Assert.Throws<ArgumentException>(() => anagramChecker.isAnagram("", ""));
             }
         }
+
+        [TestFixture]
+        public class DiscountFromPeselTests
+        {
+            [Test]
+            public void ValidPeselTests()
+            {
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPesel();
+
+                bool res = discountFromPesel.HasDiscount("44051401458");
+                Assert.AreEqual(res, true);
+
+            }
+
+            [Test]
+            public void EmptyPeselTest()
+            {
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPesel();
+
+                bool res = discountFromPesel.HasDiscount("");
+                Assert.Throws<ArgumentException>(() => discountFromPesel.HasDiscount(""));
+            }
+
+            [Test]
+            public void InvalidPeselTests()
+            {
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPesel();
+
+                Assert.Throws<ArgumentException>(() => discountFromPesel.HasDiscount("11111"));
+                Assert.Throws<ArgumentException>(() => discountFromPesel.HasDiscount("440514014580"));
+
+            }
+
+            [Test]
+            public void EdgeCasesTest()
+            {
+
+            }
+
+            [Test]
+            public void NullInputTest()
+            {
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPesel();
+
+                Assert.Throws<ArgumentNullException>(() => discountFromPesel.HasDiscount(null));
+            }
+        }
     }
 }
