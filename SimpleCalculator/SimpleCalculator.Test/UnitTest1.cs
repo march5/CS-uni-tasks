@@ -57,7 +57,7 @@ namespace SimpleCalculator.Test
             Assert.Throws<ArgumentNullException>(() => Program.TextMerger.MergeNotNull("Ala", null));
             Assert.Throws<ArgumentNullException>(() => Program.TextMerger.MergeNotNull(null, null));
         }
-
+    }
         [TestFixture]
         public class AnagramCheckerTests
         {
@@ -145,7 +145,7 @@ namespace SimpleCalculator.Test
             [Test]
             public void ValidPeselTests()
             {
-                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPesel();
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPeselComputer();
 
                 bool res = discountFromPesel.HasDiscount("44051401458");
                 Assert.AreEqual(res, true);
@@ -155,35 +155,82 @@ namespace SimpleCalculator.Test
             [Test]
             public void EmptyPeselTest()
             {
-                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPesel();
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPeselComputer();
 
-                bool res = discountFromPesel.HasDiscount("");
-                Assert.Throws<ArgumentException>(() => discountFromPesel.HasDiscount(""));
+                Assert.Throws<InvalidPeselException>(() => discountFromPesel.HasDiscount(""));
             }
 
             [Test]
             public void InvalidPeselTests()
             {
-                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPesel();
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPeselComputer();
 
-                Assert.Throws<ArgumentException>(() => discountFromPesel.HasDiscount("11111"));
-                Assert.Throws<ArgumentException>(() => discountFromPesel.HasDiscount("440514014580"));
+                Assert.Throws<InvalidPeselException>(() => discountFromPesel.HasDiscount("11111"));
+                Assert.Throws<InvalidPeselException>(() => discountFromPesel.HasDiscount("440514014580"));
+                Assert.Throws<InvalidPeselException>(() => discountFromPesel.HasDiscount("440 5140  14580"));
 
             }
+        
+        [Test]
+        public void PresentCenturyTest()
+        {
+            IDiscountFromPeselComputer discountFromPesel = new DiscountFromPeselComputer();
 
-            [Test]
+            DateTime date = DateTime.Now.AddYears(-15);
+
+            string pesel = "";
+            pesel = pesel + date.Year.ToString()[2] + date.Year.ToString()[3] + ((date.Month) + 20).ToString() + date.Day.ToString() + "01458";
+
+            bool res = discountFromPesel.HasDiscount(pesel);
+
+            Assert.AreEqual(true, res);
+        }
+
+        [Test]
             public void EdgeCasesTest()
             {
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPeselComputer();
 
+                DateTime date = DateTime.Now.AddYears(-65);
+                
+                string pesel = "";
+                pesel = pesel +  date.Year.ToString()[2] + date.Year.ToString()[3] + date.Month.ToString() + date.Day.ToString() + "01458";
+            
+                //Date for 22.11.2021
+                //"561122 0145 8 - 1956, November 22 - 65 years ago
+                bool res = discountFromPesel.HasDiscount(pesel);
+                Assert.AreEqual(true, res);
+
+                date = date.AddDays(1);
+                pesel = "" + date.Year.ToString()[2] + date.Year.ToString()[3] + date.Month.ToString() + date.Day.ToString() + "01458";
+
+                //"561123 0145 8 - 1965, November 21 - 65 years ago minus one day
+                res = discountFromPesel.HasDiscount(pesel);
+                Assert.AreEqual(false, res);
+
+                date = DateTime.Now.AddYears(-18);
+
+                pesel = "" + date.Year.ToString()[2] + date.Year.ToString()[3] + ((date.Month) + 20).ToString() + date.Day.ToString() + "01458";
+
+                //"033122 0145 8 - 2003, November 22 - 18 years ago
+                res = discountFromPesel.HasDiscount(pesel);
+                Assert.AreEqual(false, res);
+
+                date = date.AddDays(1);
+
+                pesel = "" + date.Year.ToString()[2] + date.Year.ToString()[3] + ((date.Month) + 20).ToString() + date.Day.ToString() + "01458";
+
+                //"033123 0145 8 - 2003, November 22 - 18 years ago minus one day
+                res = discountFromPesel.HasDiscount(pesel);
+                Assert.AreEqual(true, res);
             }
 
             [Test]
             public void NullInputTest()
             {
-                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPesel();
+                IDiscountFromPeselComputer discountFromPesel = new DiscountFromPeselComputer();
 
-                Assert.Throws<ArgumentNullException>(() => discountFromPesel.HasDiscount(null));
+                Assert.Throws<InvalidPeselException>(() => discountFromPesel.HasDiscount(null));
             }
         }
-    }
 }

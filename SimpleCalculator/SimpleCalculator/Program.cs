@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SimpleCalculator
 {
@@ -10,8 +11,99 @@ namespace SimpleCalculator
 
     public class InvalidPeselException : Exception
     {
+        public InvalidPeselException(string message) : base(message) { }
+        public InvalidPeselException() : base() { }
+        public InvalidPeselException(string message, Exception e) : base(message, e) { }
+
     }
 
+    public class DiscountFromPeselComputer : IDiscountFromPeselComputer
+    {
+        public bool HasDiscount(string pesel)
+        {
+            if (pesel == null) throw new InvalidPeselException("Null input string");
+            if (pesel.Length != 11) throw new InvalidPeselException("Invalid Pesel length");
+            foreach(char c in pesel)
+            {
+                if (c < '0' || c > '9') throw new InvalidPeselException("Invalid character in pesel");
+            }
+
+            int day = Int32.Parse(pesel.Substring(4, 2));
+            int month = Int32.Parse(pesel.Substring(2, 2));
+            int year = Int32.Parse(pesel.Substring(0, 2));
+
+            if(month > 80)
+            {
+                year += 1800;
+                month -= 80;
+            }
+            else if(month > 60)
+            {
+                year += 2200;
+                month -= 60;
+            }
+            else if(month > 40)
+            {
+                year += 2100;
+                month -= 40;
+            }
+            else if(month > 20)
+            {
+                year += 2000;
+                month -= 20;
+            }
+            else
+            {
+                year += 1900;
+            }
+
+            DateTime birthDate = new DateTime(year, month, day);
+            TimeSpan diff = DateTime.Now.Subtract(birthDate);
+
+            TimeSpan yearSpanBelow = DateTime.Now.AddYears(18) - DateTime.Now;
+            TimeSpan yearSpanAbove = DateTime.Now.AddYears(65) - DateTime.Now;
+
+            Console.WriteLine(diff + " " + yearSpanBelow + " " + yearSpanAbove);
+
+            if (diff < yearSpanBelow || diff > yearSpanAbove) return true;
+
+            return false;
+        }
+    }
+
+    /*public class DiscountFromPeselComputer : IDiscountFromPeselComputer //Cw05_Przykład.cs
+    {
+
+        public bool HasDiscount(string pesel)
+        {
+            try
+            {
+                int year = Int32.Parse(pesel.Substring(0, 2));
+                int Month = Int32.Parse(pesel.Substring(2, 2));
+                int day = Int32.Parse(pesel.Substring(4, 2));
+                DateTime birthDate = new DateTime(DateTime.Now.Year - year > 2000 ? 2000 + year : 1900 + year, Month, day);
+
+                if (!Math.Floor(DateTime.Now.Subtract(birthDate).TotalDays / 365.2425).IsBetween(18, 65))
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            catch (Exception e)
+            {
+                throw new InvalidPeselException(e.Message);
+            }
+        }
+    }
+
+    public static class ExtensionsNumeric
+    {
+        public static bool IsBetween<T>(this T item, T start, T end)
+        {
+            return Comparer<T>.Default.Compare(item, start) >= 0 && Comparer<T>.Default.Compare(item, end) <= 0;
+        }
+    }*/
 
 
     public interface IAnagramChecker
