@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
         "projectName": "SimpleCalculator.Test",
-        "projectPath": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net472": {
             "targetAlias": "net472",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj"
+              "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj"
               }
             }
           }
@@ -61,15 +57,15 @@
               "version": "[3.16.1, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj",
         "projectName": "SimpleCalculator",
-        "projectPath": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
