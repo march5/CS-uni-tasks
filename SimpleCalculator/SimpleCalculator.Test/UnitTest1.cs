@@ -208,7 +208,7 @@ namespace SimpleCalculator.Test
                 res = discountFromPesel.HasDiscount(pesel);
                 Assert.AreEqual(false, res);
 
-                date = DateTime.Now.AddYears(-18);
+                date = DateTime.Now.AddYears(-18).AddDays(1);
 
                 pesel = "" + date.Year.ToString()[2] + date.Year.ToString()[3] + ((date.Month) + 20).ToString() + date.Day.ToString() + "01458";
 

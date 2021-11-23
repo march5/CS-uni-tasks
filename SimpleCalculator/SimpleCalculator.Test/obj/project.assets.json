@@ -181,19 +181,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
       "projectName": "SimpleCalculator.Test",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\obj\\",
+      "projectPath": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\SimpleCalculator.Test.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator.Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -207,8 +212,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\Studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj"
+            "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\studia\\C#\\CS-uni-tasks\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.csproj"
             }
           }
         }
@@ -236,7 +241,7 @@
             "version": "[3.16.1, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

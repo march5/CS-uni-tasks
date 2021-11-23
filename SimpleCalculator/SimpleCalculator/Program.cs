@@ -57,11 +57,12 @@ namespace SimpleCalculator
                 year += 1900;
             }
 
-            DateTime birthDate = new DateTime(year, month, day);
-            TimeSpan diff = DateTime.Now.Subtract(birthDate);
+            DateTime now = DateTime.Now;
+            DateTime birthDate = new DateTime(year, month, day, now.Hour, now.Minute, now.Second);
+            TimeSpan diff = now.Subtract(birthDate);
 
-            TimeSpan yearSpanBelow = DateTime.Now.AddYears(18) - DateTime.Now;
-            TimeSpan yearSpanAbove = DateTime.Now.AddYears(65) - DateTime.Now;
+            TimeSpan yearSpanBelow = now.AddYears(18) - now;
+            TimeSpan yearSpanAbove = now.AddYears(65) - now;
 
             Console.WriteLine(diff + " " + yearSpanBelow + " " + yearSpanAbove);
 
