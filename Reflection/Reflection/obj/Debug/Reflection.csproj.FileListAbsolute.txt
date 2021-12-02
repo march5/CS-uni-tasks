@@ -5,3 +5,10 @@ C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\Reflection\Reflection\obj\Debug\Refle
 C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\Reflection\Reflection\obj\Debug\Reflection.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\Reflection\Reflection\obj\Debug\Reflection.exe
 C:\Users\HP\Desktop\studia\C#\CS-uni-tasks\Reflection\Reflection\obj\Debug\Reflection.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection\Reflection\bin\Debug\Reflection.exe.config
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection\Reflection\bin\Debug\Reflection.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection\Reflection\bin\Debug\Reflection.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection\Reflection\obj\Debug\Reflection.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection\Reflection\obj\Debug\Reflection.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection\Reflection\obj\Debug\Reflection.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection\Reflection\obj\Debug\Reflection.pdb

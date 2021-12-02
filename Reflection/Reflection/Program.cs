@@ -9,7 +9,6 @@ namespace Reflection
 {
     class Program
     {
-
         public class Customer
         {
             private string _name;
@@ -47,42 +46,80 @@ namespace Reflection
             }
         }
 
-        static void Main(string[] args)
+        public static void task1()
         {
-            PropertyInfo[] fieldInfo;
+            FieldInfo[] fieldInfo;
+            PropertyInfo[] propertyInfos;
             Type type = typeof(Customer);
 
-            fieldInfo = type.GetProperties(BindingFlags.Public | BindingFlags.Instance );
+            fieldInfo = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            propertyInfos = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
             Console.WriteLine("Fields: ");
             //lista pól w klasie Pogrupowane względem dostępu
             Console.WriteLine("-- Public: ");
             //publiczne
-            for(int i =0; i < fieldInfo.Length; i++)
+            foreach (var x in fieldInfo)
             {
-                Console.WriteLine(fieldInfo[i].DeclaringType + "; " + fieldInfo[i].Name);
+                Console.WriteLine(x.Attributes + " " + x.Name);
             }
-            Console.WriteLine("-- Non Public: ");
+            for (int i = 0; i < propertyInfos.Length; i++)
+            {
+                Console.WriteLine(propertyInfos[i].DeclaringType + "; " + propertyInfos[i].Name);
+            }
+            Console.WriteLine("\n-- Non Public: ");
             //niepubliczne
             //Przykład:
             //Type: “string”; name: “_name”
-            /*fieldInfo = type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
-            for (int i = 0; i < fieldInfo.Length; i++)
+            fieldInfo = type.GetFields(BindingFlags.Instance | BindingFlags.NonPublic );
+            foreach (var x in fieldInfo)
             {
-                Console.WriteLine(fieldInfo[i].FieldType.Name + "; " + fieldInfo[i].Name);
-            }*/
+                Console.WriteLine(x.Attributes + " " + x.Name);
+            }
 
-            Console.WriteLine("Methods: ");
+            Console.WriteLine("\nMethods: ");
             //Lista metod
+            MethodInfo[] methods = type.GetMethods();
+            foreach(var x in methods)
+            {
+                Console.WriteLine(x.Name);
+            }
+            foreach(var con in type.GetConstructors())
+            Console.WriteLine(con.Name);
 
-            Console.WriteLine("Nested types: ");
+            Console.WriteLine("\nNested types: ");
             //typy zagnieżdżone
+            Type[] nested = type.GetNestedTypes();
+            foreach (var nest in nested)
+                Console.WriteLine(nest.Name);
 
-            Console.WriteLine("Properties: ");
+            Console.WriteLine("\nProperties: ");
             //propercje
 
-            Console.WriteLine("Members: ");
+            foreach (var property in type.GetProperties())
+                Console.WriteLine(property.Name);
+
+            Console.WriteLine("\nMembers: ");
             //Członkowie
 
+            foreach (var member in type.GetMembers())
+                Console.WriteLine(member.Name);
+        }
+
+        public static void task2()
+        {
+            Customer customer = new Customer("Dominik");
+            Type type = customer.GetType();
+
+            type.GetProperty("Address").SetValue(customer, "Cracov");
+            type.GetProperty("SomeValue").SetValue(customer, 1234);
+
+            foreach (var prop in type.GetProperties()) Console.WriteLine(prop.GetValue(customer));
+        }
+
+        static void Main(string[] args)
+        {
+            task1(); //uncomment for task1
+            task2(); //uncomment for task2
         }
     }
 }
