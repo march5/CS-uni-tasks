@@ -1,0 +1,16 @@
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\bin\Debug\net5.0\StudenstPLaygorund.exe
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\bin\Debug\net5.0\StudenstPLaygorund.deps.json
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\bin\Debug\net5.0\StudenstPLaygorund.runtimeconfig.json
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\bin\Debug\net5.0\StudenstPLaygorund.runtimeconfig.dev.json
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\bin\Debug\net5.0\StudenstPLaygorund.dll
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\bin\Debug\net5.0\ref\StudenstPLaygorund.dll
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\bin\Debug\net5.0\StudenstPLaygorund.pdb
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\StudenstPLaygorund.csproj.AssemblyReference.cache
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\StudenstPLaygorund.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\StudenstPLaygorund.AssemblyInfoInputs.cache
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\StudenstPLaygorund.AssemblyInfo.cs
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\StudenstPLaygorund.csproj.CoreCompileInputs.cache
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\StudenstPLaygorund.dll
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\ref\StudenstPLaygorund.dll
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\StudenstPLaygorund.pdb
+C:\Users\micha\source\repos\StudenstPLaygorund\StudenstPLaygorund\obj\Debug\net5.0\StudenstPLaygorund.genruntimeconfig.cache

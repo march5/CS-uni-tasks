@@ -1,0 +1,8 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\BeerProcessor\bin\Debug\BeerProcessor.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\BeerProcessor\bin\Debug\BeerProcessor.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\BeerProcessor\bin\Debug\Common.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\BeerProcessor\bin\Debug\Common.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\BeerProcessor\obj\Debug\BeerProcessor.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\BeerProcessor\obj\Debug\BeerProcessor.csproj.CopyComplete
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\BeerProcessor\obj\Debug\BeerProcessor.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\BeerProcessor\obj\Debug\BeerProcessor.pdb

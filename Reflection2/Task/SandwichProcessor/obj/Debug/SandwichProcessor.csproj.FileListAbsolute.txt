@@ -1,0 +1,9 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\bin\Debug\SandwichProcessor.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\bin\Debug\SandwichProcessor.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\bin\Debug\Common.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\bin\Debug\Common.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\obj\Debug\SandwichProcessor.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\obj\Debug\SandwichProcessor.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\obj\Debug\SandwichProcessor.csproj.CopyComplete
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\obj\Debug\SandwichProcessor.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\SandwichProcessor\obj\Debug\SandwichProcessor.pdb

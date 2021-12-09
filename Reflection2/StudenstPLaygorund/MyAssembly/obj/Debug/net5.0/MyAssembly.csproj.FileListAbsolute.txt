@@ -1,0 +1,12 @@
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\bin\Debug\net5.0\MyAssembly.deps.json
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\bin\Debug\net5.0\MyAssembly.dll
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\bin\Debug\net5.0\ref\MyAssembly.dll
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\bin\Debug\net5.0\MyAssembly.pdb
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\obj\Debug\net5.0\MyAssembly.csproj.AssemblyReference.cache
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\obj\Debug\net5.0\MyAssembly.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\obj\Debug\net5.0\MyAssembly.AssemblyInfoInputs.cache
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\obj\Debug\net5.0\MyAssembly.AssemblyInfo.cs
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\obj\Debug\net5.0\MyAssembly.csproj.CoreCompileInputs.cache
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\obj\Debug\net5.0\MyAssembly.dll
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\obj\Debug\net5.0\ref\MyAssembly.dll
+C:\Users\micha\source\repos\StudenstPLaygorund\MyAssembly\obj\Debug\net5.0\MyAssembly.pdb

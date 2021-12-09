@@ -1,0 +1,6 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\Common\bin\Debug\Common.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\Common\bin\Debug\Common.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\Common\obj\Debug\Common.dll
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Reflection2\Task\Common\obj\Debug\Common.pdb
