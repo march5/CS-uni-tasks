@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\MiniProject\MiniProject\bin\Debug\MiniProject.exe.config
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\MiniProject\MiniProject\bin\Debug\MiniProject.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\MiniProject\MiniProject\bin\Debug\MiniProject.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\MiniProject\MiniProject\obj\Debug\MiniProject.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\MiniProject\MiniProject\obj\Debug\MiniProject.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\MiniProject\MiniProject\obj\Debug\MiniProject.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\MiniProject\MiniProject\obj\Debug\MiniProject.pdb

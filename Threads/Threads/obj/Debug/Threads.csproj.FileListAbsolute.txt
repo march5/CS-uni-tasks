@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Threads\Threads\bin\Debug\Threads.exe.config
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Threads\Threads\bin\Debug\Threads.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Threads\Threads\bin\Debug\Threads.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Threads\Threads\obj\Debug\Threads.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Threads\Threads\obj\Debug\Threads.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Threads\Threads\obj\Debug\Threads.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\Threads\Threads\obj\Debug\Threads.pdb
