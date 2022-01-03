@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Reflection",
+    "\\MiniProject",
+    "\\MiniProject\\MiniProject",
     "\\Reflection\\Reflection"
   ],
-  "SelectedNode": "\\Reflection\\Reflection\\Program.cs",
+  "SelectedNode": "\\MiniProject\\MiniProject\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
