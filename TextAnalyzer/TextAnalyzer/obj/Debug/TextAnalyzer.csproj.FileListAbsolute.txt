@@ -1,0 +1,10 @@
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\bin\Debug\TextAnalyzer.exe.config
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\bin\Debug\TextAnalyzer.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\bin\Debug\TextAnalyzer.pdb
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\obj\Debug\TextAnalyzer.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\obj\Debug\TextAnalyzer.Form1.resources
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\obj\Debug\TextAnalyzer.Properties.Resources.resources
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\obj\Debug\TextAnalyzer.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\obj\Debug\TextAnalyzer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\obj\Debug\TextAnalyzer.exe
+C:\Users\Admin\Desktop\Studia\C#\CS-uni-tasks\TextAnalyzer\TextAnalyzer\obj\Debug\TextAnalyzer.pdb
